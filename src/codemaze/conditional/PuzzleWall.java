@@ -62,13 +62,11 @@ public class PuzzleWall {
 		for(int outIdx = 0; outIdx < outerRing.size(); outIdx++) {
 			for(int midIdx = 0; midIdx < middleRing.size(); midIdx++) {
 				for(int innerIdx = 0; innerIdx < innerRing.size(); innerIdx++) {
-					if(outerRing.get(outIdx).equals(middleRing.get(midIdx)) && outerRing.get(outIdx).equals(innerRing.get(innerIdx))) {
-						if(innerRing.get(innerIdx).equals(middleRing.get(midIdx))) {
-							passwordString = "" + outIdx + midIdx + innerIdx;
-							hitCount++;
-							if(hitCount >= 2) {
-								break loop;
-							}
+					if(outerRing.get(outIdx).equals(middleRing.get(midIdx)) && middleRing.get(midIdx).equals(innerRing.get(innerIdx))) {
+						passwordString = "" + outIdx + midIdx + innerIdx;
+						hitCount++;
+						if(hitCount >= 2) {
+							break loop;
 						}
 					}
 				}

@@ -5,8 +5,8 @@ public class Constants {
 		public static final String startMessage = "Welcome to the Code Maze! It has many twists and turns, and only "
 				+ "your wit and trusty debugger will see you through to the end.\n"
 				+ "To start off, let's see if you know who you are...";
-		public static final String tail = "Enter that at codemaze.herokuapp.com";
 		public static final String firstPassword = "Congratulations! Gotta know who you are before you can go anywhere. Your first password is: ";
+		public static final String tail = "Enter that at cs2420-lab.eng.utah.edu";
 	}
 	
 	public static interface Cauldron {

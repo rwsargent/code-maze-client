@@ -36,6 +36,11 @@ public class Entrance {
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.ENTRANCE, passwordChunk);
 		System.out.println(Constants.Entrance.firstPassword);
 		System.err.println(passwordChunk);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(Constants.Entrance.tail);
 	}
 }

@@ -16,16 +16,18 @@ public class PasswordGenerator {
 	}
 	
 	private static String generatePassword(String uid) {
+		StringBuilder sb = new StringBuilder(uid).append('i').append('n').append('w').append('a').append('n');
 		MessageDigest md = null;
 		try {
 			 md = MessageDigest.getInstance("MD5");
 		} catch (NoSuchAlgorithmException e) {
 			// MD5 should always work.
 		}
-		md.update(uid.getBytes());
+		String seed = sb.toString();
+		md.update(seed.getBytes());
 		byte byteData[] = md.digest();
        //convert the byte to hex format method 1
-		StringBuffer sb = new StringBuffer();
+		sb = new StringBuilder();
 		for (int i = 0; i < byteData.length; i++) {
 			sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
 		}
