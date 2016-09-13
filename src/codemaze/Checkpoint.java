@@ -11,13 +11,17 @@ public class Checkpoint {
 		} catch (MazeException e) {
 			return SpawnPoint.ENTRANCE;
 		}
+		
 		if(labProps.getProperty(Constants.LabPropertyKeys.UID) != null) {
 			if (labProps.getProperty(Constants.LabPropertyKeys.ENTRANCE) != null) {
 				if(labProps.getProperty(Constants.LabPropertyKeys.BINARY) != null) {
 					if(labProps.getProperty(Constants.LabPropertyKeys.TEA_CUPS) !=  null) {
 						if(labProps.getProperty(Constants.LabPropertyKeys.SPHINX) != null) {
 							if(labProps.getProperty(Constants.LabPropertyKeys.TUMBLERS) != null) {
-								return SpawnPoint.FINISH;
+								if(labProps.getProperty(Constants.LabPropertyKeys.GUARD) != null) {
+									return SpawnPoint.FINISH;
+								}
+								return SpawnPoint.GUARD;
 							}
 							return SpawnPoint.PUZZLE_WALL;
 						}
