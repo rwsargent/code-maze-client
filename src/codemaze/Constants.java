@@ -34,9 +34,14 @@ public class Constants {
 				+ "Once given to the puzzle wall, the tumblers are predictablly scrambled. Fortunately for you, your debugger can watch the Puzzle Wall figure out the password for itself.";
 	}
 	
-	public static interface Chain {
-		public static final String GREETING = "The maze ends at a sheer cliff wall, with only one way up. A rusty chain, dangling from heights you can't fathom.\n" +
-				"You start you ascent, but becareful...a chain is only as strong as itss weakest link."; 
+	public static interface Password {
+		public static final String GREETING = "You are nearing the end...the maze has blocked your way with a solid oak door.\n"
+				+ "The door will open if you say the correct password. Etched onto the door are all the possible letters\n"
+				+ " other weary travelers have tried. If you can pick the right ones, you'll be sure to figure out the password!";
+	}
+	public static interface Fence {
+		public static final String GREETING = "The way is blocked by a seemingly impenaturable chain link fence.\n"
+				+ "However, you know a chain is only as strong as it's weakest link. Can you find the right one to remove?";
 				
 	}
 	
@@ -47,7 +52,8 @@ public class Constants {
 		public static String TEA_CUPS = "spinners";
 		public static String SPHINX = "sphinx";
 		public static String TUMBLERS = "tumblers";
-		public static String GUARD = "guard";
+		public static String CHAIN = "chain";
+		public static String PASSWORD = "password";
 	}
 	
 	public static String MAZE_PROPERTY_FILENAME = "maze.properties";

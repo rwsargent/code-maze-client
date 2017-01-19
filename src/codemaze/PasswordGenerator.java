@@ -18,11 +18,7 @@ public class PasswordGenerator {
 	private static String generatePassword(String uid) {
 		StringBuilder sb = new StringBuilder(uid).append('i').append('n').append('w').append('a').append('n');
 		MessageDigest md = null;
-		try {
-			 md = MessageDigest.getInstance("MD5");
-		} catch (NoSuchAlgorithmException e) {
-			// MD5 should always work.
-		}
+		md = getmd5(md);
 		String seed = sb.toString();
 		md.update(seed.getBytes());
 		byte byteData[] = md.digest();
@@ -32,5 +28,13 @@ public class PasswordGenerator {
 			sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
 		}
 		return sb.toString();
+	}
+	private static MessageDigest getmd5(MessageDigest md) {
+		try {
+			 md = MessageDigest.getInstance("MD5");
+		} catch (NoSuchAlgorithmException e) {
+			// MD5 should always work.
+		}
+		return md;
 	}
 }

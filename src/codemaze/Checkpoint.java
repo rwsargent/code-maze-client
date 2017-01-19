@@ -11,25 +11,28 @@ public class Checkpoint {
 		} catch (MazeException e) {
 			return SpawnPoint.ENTRANCE;
 		}
-		
-		if(labProps.getProperty(Constants.LabPropertyKeys.UID) != null) {
+
+		if (labProps.getProperty(Constants.LabPropertyKeys.UID) != null) {
 			if (labProps.getProperty(Constants.LabPropertyKeys.ENTRANCE) != null) {
-				if(labProps.getProperty(Constants.LabPropertyKeys.BINARY) != null) {
-					if(labProps.getProperty(Constants.LabPropertyKeys.TEA_CUPS) !=  null) {
-						if(labProps.getProperty(Constants.LabPropertyKeys.SPHINX) != null) {
-							if(labProps.getProperty(Constants.LabPropertyKeys.TUMBLERS) != null) {
-								if(labProps.getProperty(Constants.LabPropertyKeys.GUARD) != null) {
-									return SpawnPoint.FINISH;
+				if (labProps.getProperty(Constants.LabPropertyKeys.TEA_CUPS) != null) {
+					if (labProps.getProperty(Constants.LabPropertyKeys.SPHINX) != null) {
+						if (labProps.getProperty(Constants.LabPropertyKeys.TUMBLERS) != null) {
+							if (labProps.getProperty(Constants.LabPropertyKeys.CHAIN) != null) {
+								if (labProps.getProperty(Constants.LabPropertyKeys.PASSWORD) != null) {
+									if (labProps.getProperty(Constants.LabPropertyKeys.BINARY) != null) {
+										return SpawnPoint.FINISH;
+									}
+									return SpawnPoint.BINARY_SEARCH;
 								}
-								return SpawnPoint.GUARD;
+								return SpawnPoint.PASSWORD;
 							}
-							return SpawnPoint.PUZZLE_WALL;
+							return SpawnPoint.CHAIN;
 						}
-						return SpawnPoint.SPHINX;
+						return SpawnPoint.PUZZLE_WALL;
 					}
-					return SpawnPoint.TEA_CUPS;
+					return SpawnPoint.SPHINX;
 				}
-				return SpawnPoint.BINARY_SEARCH;
+				return SpawnPoint.TEA_CUPS;
 			}
 			return SpawnPoint.ENTRANCE;
 		}

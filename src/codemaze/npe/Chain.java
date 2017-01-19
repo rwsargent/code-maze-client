@@ -1,36 +1,36 @@
 package codemaze.npe;
 
-public class Guard {
+public class Chain {
 	StringBuilder password = new StringBuilder();
 	
-	public Guard one() {
+	public Chain is() {
 		password.append('a');
 		return this;
 	}
-	public Guard of() {
+	public Chain only() {
 		password.append('a');
 		return this;
 	}
-	public Guard these() {
+	public Chain as() {
 		password.append('a');
 		return this;
 	}
-	public Guard silly() {
+	public Chain strong() {
 		password.append('a');
 		return this;
 	}
-	public Guard methods() {
+	public Chain methods() {
 		password.append('a');
 		return this;
 	}
-	public Guard just() {
+	public Chain its() {
 		return null;
 	}
-	public Guard breaks() {
+	public Chain weakest() {
 		password.append('a');
 		return this;
 	}
-	public Guard everything() {
+	public Chain link() {
 		password.append('a');
 		return this;
 	}
