@@ -18,11 +18,13 @@ public class Entrance {
 
 	public static Properties readPropertyFile(String uidPropertyFileName) {
 		Properties uidProp = new Properties();
+		File propFile = new File(uidPropertyFileName);
 		try {
-			uidProp.load(new FileInputStream(new File(uidPropertyFileName)));
+			uidProp.load(new FileInputStream(propFile));
 		} catch (FileNotFoundException e) {
-			throw new MazeException("Woops! Looks like you don't know what your UID is!");
+			throw new MazeException("I couldn't find your maze.properties file! I looked for it at " + propFile.getAbsolutePath() + "\nIs that where you put it?");
 		} catch (IOException e) {
+			throw new MazeException("Woah, somethine really bad happened. " + e.getMessage());
 		}
 		return uidProp;
 	}
