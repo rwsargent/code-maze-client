@@ -22,7 +22,7 @@ public class Backpack {
 			throw new MazeException("Looks like you didn't make it through the tea cups in the right order!");
 		}
 		System.out.println("Once the room stops spinning, continue you on! Your next password chunk is:");
-		String chunk = PasswordGenerator.getPasswordChunk(2);
+		String chunk = PasswordGenerator.getPasswordChunk(1);
 		System.err.println(chunk);
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.TEA_CUPS, chunk);
 	}
@@ -32,7 +32,7 @@ public class Backpack {
 			throw new MazeException("Close! But you were taking too long and she gobbled you up whole.");
 		}
 		System.out.println("Nice one. Once she got the password, she hopped to the side and let you pass!\nYour next password chunk is:");
-		String chunk = PasswordGenerator.getPasswordChunk(3);
+		String chunk = PasswordGenerator.getPasswordChunk(2);
 		System.err.println(chunk);
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.SPHINX, chunk);
 	}

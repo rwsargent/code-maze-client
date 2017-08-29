@@ -13,7 +13,7 @@ public class ChainFence {
 			throw new MazeException("You removed the wrong method! Only pick one method to remove from the guard's method chain.");
 		}
 		System.out.println("You found the weakest link! The next chunk is: ");
-		String chunk = PasswordGenerator.getPasswordChunk(5);
+		String chunk = PasswordGenerator.getPasswordChunk(4);
 		System.err.println(chunk);
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.CHAIN, chunk);
 	}

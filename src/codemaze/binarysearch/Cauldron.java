@@ -39,7 +39,7 @@ public class Cauldron {
 					".\nBinarySearch returned true, should be false.");
 		}
 		
-		String chunk = PasswordGenerator.getPasswordChunk(1);
+		String chunk = PasswordGenerator.getPasswordChunk(6);
 		System.out.println("You got the right potions! Your next password chunk is:\n" + chunk);
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.BINARY, chunk);
 		

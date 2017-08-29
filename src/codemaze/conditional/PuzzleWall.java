@@ -79,7 +79,7 @@ public class PuzzleWall {
 			throw new MazeException("Nope! " + calculatePuzzlePassword + " is not the Puzzle Wall Password!");
 		}
 		System.out.println("The puzzle wall slides open! You may procede. The next chunk is: ");
-		String chunk = PasswordGenerator.getPasswordChunk(4);
+		String chunk = PasswordGenerator.getPasswordChunk(3);
 		System.err.println(chunk);
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.TUMBLERS, chunk);
 	}

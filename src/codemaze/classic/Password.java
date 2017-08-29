@@ -52,7 +52,7 @@ public class Password {
 		}
 		
 		System.out.println("The password was accepted! Proceed...\nYour password is: " );
-		String chunk = PasswordGenerator.getPasswordChunk(6);
+		String chunk = PasswordGenerator.getPasswordChunk(5);
 		System.err.println(chunk + "\n");
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.PASSWORD, chunk);
 	}
