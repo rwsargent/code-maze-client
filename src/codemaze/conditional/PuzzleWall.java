@@ -63,9 +63,9 @@ public class PuzzleWall {
 			for(int midIdx = 0; midIdx < middleRing.size(); midIdx++) {
 				for(int innerIdx = 0; innerIdx < innerRing.size(); innerIdx++) {
 					if(outerRing.get(outIdx).equals(middleRing.get(midIdx)) && middleRing.get(midIdx).equals(innerRing.get(innerIdx))) {
-						passwordString = "" + outIdx + midIdx + innerIdx;
+						passwordString = "" + outIdx + "-" + midIdx + "-" + innerIdx;
 						hitCount++;
-						if(hitCount >= 2) {
+						if(hitCount >= 400) {
 							break loop;
 						}
 					}
@@ -74,6 +74,7 @@ public class PuzzleWall {
 		}
 	}
 
+	// expected password 25-18-17
 	public void tryPassword(String calculatePuzzlePassword) {
 		if(!passwordString.equals(calculatePuzzlePassword)) {
 			throw new MazeException("Nope! " + calculatePuzzlePassword + " is not the Puzzle Wall Password!");

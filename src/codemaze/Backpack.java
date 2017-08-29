@@ -29,7 +29,11 @@ public class Backpack {
 	
 	public void debugSphinx(Sphinx sphinx, String password) {
 		if(!sphinx.tryPassword(password)) {
-			throw new MazeException("Close! But you were taking too long and she gobbled you up whole.");
+			throw new MazeException("Close! But you were taking too long and she gobbled you up whole. (Really, you're the right track, but didn't give the correct password)");
+		}
+		
+		if(!password.equals("1 4 9 16 25")) {
+			throw new MazeException("The sphinx eats coders who try to be to clever for their own good. Do not change the original function, just the supplied password");
 		}
 		System.out.println("Nice one. Once she got the password, she hopped to the side and let you pass!\nYour next password chunk is:");
 		String chunk = PasswordGenerator.getPasswordChunk(2);

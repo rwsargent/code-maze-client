@@ -16,7 +16,7 @@ public class PasswordGenerator {
 	}
 	
 	private static String generatePassword(String uid) {
-		StringBuilder sb = new StringBuilder(uid).append('i').append('n').append('w').append('a').append('n');
+		StringBuilder sb = new StringBuilder(uid).append((char)('a'+8)).append((char)('a'+13)).append((char)('a'+22)).append((char)('a'+0)).append((char)('a'+13));
 		MessageDigest md = null;
 		md = getmd5(md);
 		String seed = sb.toString();

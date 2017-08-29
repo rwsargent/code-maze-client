@@ -40,8 +40,8 @@ public class Cauldron {
 		}
 		
 		String chunk = PasswordGenerator.getPasswordChunk(6);
-		System.out.println("You got the right potions! Your next password chunk is:\n" + chunk);
+		System.err.println("You got the right potions! Your next password chunk is:\n" + chunk);
+		System.err.flush();
 		PropertyHandler.writeChunk(Constants.LabPropertyKeys.BINARY, chunk);
-		
 	}
 }
