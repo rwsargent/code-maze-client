@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.function.BiFunction;
 
 import codemaze.Constants;
 import codemaze.MazeException;
@@ -13,10 +12,6 @@ import codemaze.PropertyHandler;
 
 public class PuzzleWall {
 	private String passwordString; 
-	
-	public PuzzleWall() {
-		
-	}
 	
 	public List<Tumbler> generateTumblers(int size) {
 		List<Tumbler> tumblers = new ArrayList<>();
@@ -46,10 +41,6 @@ public class PuzzleWall {
 		public String toString() {
 			return String.valueOf(name);
 		}
-	}
-
-	public void tumble(List<Tumbler> outerRing, List<Tumbler> middleRing, List<Tumbler> innerRing, BiFunction<List<Tumbler>[], String, Boolean> object) {
-		
 	}
 
 	public void scrambleTumblers(List<Tumbler> outerRing, List<Tumbler> middleRing, List<Tumbler> innerRing) {
