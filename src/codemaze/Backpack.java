@@ -19,7 +19,7 @@ public class Backpack {
 
 	public void checkCode(TeaCupCode code) {
 		if(!code.isValid()) {
-			throw new MazeException("Looks like you didn't make it through the tea cups in the right order!");
+			throw new MazeException("Looks like you didn't make it through the tea cups in the right order! Make sure to only comment out loops that are infinite!");
 		}
 		System.out.println("Once the room stops spinning, continue you on! Your next password chunk is:");
 		String chunk = PasswordGenerator.getPasswordChunk(1);
@@ -43,5 +43,9 @@ public class Backpack {
 
 	public void calculateTumblers(Tumbler... tumblers) {
 		
+	}
+
+	public void recordCombo(int a, int b, int c) {
+		//nothing is done here
 	}
 }

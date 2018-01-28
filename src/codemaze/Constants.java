@@ -21,18 +21,17 @@ public class Constants {
 	}
 	
 	public static interface Sphinx {
-		public static final String GREETING = "You're making good progress! But before you know you it you come up agains a Cyborb Sphnix. Every maze has a Sphinx.\n"
+		public static final String GREETING = "You're making good progress! But before you know you it you come up agains a Cyborg Sphinx. Every maze has a Sphinx.\n"
 				+ "She asks for a password, but doesn't realize you've hooked up your handy-dandy debugger to her Main Frame.\nCan you discover the password she expects?";
 	}
 	
 	public static interface PuzzleWall {
-		public static final String GREETING = "Past the Sphnix, you think you're in the clear, but you come up against a Puzzle Wall with thousands "
+		public static final String GREETING = "Past the Sphinx, you think you're in the clear, but you come up against a Puzzle Wall with thousands "
 				+ "and thousands of possible combinations. Only one is the right answer...if only you could stop it with some condition!";
 		public static final String EXPLANATION = "These three tumblers are procedurally scrambled. The Puzzle Wall opens with the proper password."
-				+ "\nThe password is the index of each tumbler when all three align on the outer ring's final iteration.\n"
-				+ "Right now, the tumblers align on the first index, so the password would be '0-0-0'. The order is Outer - Middle - Inner\n"
-				+ "Once given to the puzzle wall, the tumblers are predictablly scrambled. Fortunately for you, your debugger can watch the Puzzle Wall"
-				+ " figure out the password for itself.";
+				+ "\nThe password is the index of each tumbler when all three align (all three equal each other) on the outer ring's final iteration.\n"
+				+ "Right now, the tumblers are on the first index, so the password would be '0-0-0'. The order is Outer - Middle - Inner\n"
+				+ "Fill in the if-statement, and use breakpoint properties to your advantage.";
 	}
 	
 	public static interface Password {

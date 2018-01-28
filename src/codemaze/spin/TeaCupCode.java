@@ -1,5 +1,7 @@
 package codemaze.spin;
 
+import java.util.Arrays;
+
 public class TeaCupCode {
 
 	int[] mCode;
@@ -10,7 +12,6 @@ public class TeaCupCode {
 		mCode = code;
 	}
 	public boolean isValid() {
-		return true;
-//		return Arrays.equals(mCode, new int[]{1,2,3,4,5});
+		return Arrays.equals(mCode, new int[]{-3,13,-1,-8,5});
 	}
 }
